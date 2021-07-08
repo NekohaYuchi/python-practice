@@ -33,7 +33,7 @@ while start == True:
     else:
         bottles_number -= 1
 
-bottles_number*0.5 == money
+money = bottles_number*0.5
 
 #會做一個按鍵，一旦按下第一次結束鍵將會發出over == True
 if over == True:
