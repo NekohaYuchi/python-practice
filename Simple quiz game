@@ -1,0 +1,30 @@
+from question import Question
+Text = [
+    "Hololive裡面誰是菁英? \n(a) Miko\n(b) Pekora\(c) Rushia\n(d)Runa\n\n",
+    "2021年的Minecraft夏日祭典是由哪個建設舉辦的? \n(a) 不知火建設\n(b) Akukin建設\n(c)兔田建設\n(d) 以上皆是 \n\n",
+    "hololive裡面被稱為海豹的是\n(a) rami\n(b) nene\n(c) sora\n(d) roboko\n\n" 
+]
+
+questions = [
+    Question(Text[0],"a"),
+    Question(Text[1],"c"),
+    Question(Text[2],"b")
+]
+
+def run_test(questions):
+    scores = 0
+    for question in questions:
+        answer = input(question.description)
+        if answer == question.answer:
+            scores += 1
+    
+    print("你得到" + str(scores) + "分，共" + str(len(questions)) + "題")
+
+run_test(questions)      
+
+
+#question.py
+class Question:
+    def __init__(self,description,answer):
+        self.description = description
+        self.answer = answer
